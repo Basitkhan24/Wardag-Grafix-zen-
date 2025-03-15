@@ -1,4 +1,4 @@
-// This project consists of multiple files. Below is the full HTML, CSS, and JavaScript code for a beautiful portfolio with separate category pages.
+// New Portfolio Design with a Modern Layout
 
 // === Main Page: index.html ===
 
@@ -12,59 +12,65 @@
 </head>
 <body>
     <header>
-        <h1>GraphixZen Portfolio</h1>
+        <h1>Welcome to GraphixZen</h1>
+        <p>Your one-stop destination for stunning graphic designs</p>
     </header>
-    <nav>
-        <ul>
-            <li><a href="logo.html">Logo Design</a></li>
-            <li><a href="thumbnail.html">Thumbnail Design</a></li>
-            <li><a href="image-editing.html">Image Editing</a></li>
-            <li><a href="web.html">Web Design</a></li>
-            <li><a href="branding.html">Branding</a></li>
-        </ul>
-    </nav>
+    <section class="categories">
+        <div class="category-card"><a href="logo.html">Logo Design</a></div>
+        <div class="category-card"><a href="thumbnail.html">Thumbnail Design</a></div>
+        <div class="category-card"><a href="image-editing.html">Image Editing</a></div>
+        <div class="category-card"><a href="web.html">Web Design</a></div>
+        <div class="category-card"><a href="branding.html">Branding</a></div>
+    </section>
     <footer>
         <p>Contact: muhammadbasitullah75@gmail.com | WhatsApp: 03025928098 / 03169740039</p>
     </footer>
 </body>
 </html>
 
-// === CSS File: styles.css ===
+// === New CSS File: styles.css ===
 
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f4f4f4;
-}
-header {
-    background: #333;
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
     color: white;
-    padding: 20px;
-    font-size: 24px;
-}
-nav ul {
-    list-style: none;
+    text-align: center;
+    margin: 0;
     padding: 0;
 }
-nav ul li {
-    display: inline;
-    margin: 10px;
+header {
+    background: linear-gradient(135deg, #ff8a00, #da1b60);
+    padding: 40px;
+    font-size: 24px;
 }
-nav ul li a {
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+.category-card {
+    background: #222;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+.category-card:hover {
+    transform: scale(1.1);
+}
+.category-card a {
     text-decoration: none;
-    background: #007bff;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 18px;
 }
 footer {
-    background: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 30px;
+    background: #222;
+    padding: 20px;
+    margin-top: 50px;
 }
 
-// === Category Page Template (Example: logo.html) ===
+// === Example Category Page: logo.html ===
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,11 +84,11 @@ footer {
     <header>
         <h1>Logo Design</h1>
     </header>
-    <a href="index.html">⬅ Back to Home</a>
-    <div class="gallery">
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+    <section class="gallery">
         <img src="images/logo1.jpg" alt="Logo 1">
         <img src="images/logo2.jpg" alt="Logo 2">
-    </div>
+    </section>
     <footer>
         <p>Contact: muhammadbasitullah75@gmail.com | WhatsApp: 03025928098 / 03169740039</p>
     </footer>
